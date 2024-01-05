@@ -11,27 +11,32 @@ public:
 };
 
 void MergeSort::merge(int arr[], int l, int m, int h) {
-	int temp[50];
-	int i=l;
-	int j=m+1;
-	int k=l;
-	while((i <= m) && (j <= h)){
-		if(arr[i]<arr[j]){
-			temp[k++]=arr[i++];
-		}else{
-			temp[k++]=arr[j++];
-		}
-	}
-	while(i<=m){
-		temp[k++]=arr[i++];
-	}
-	while(j<=h){
-		temp[k++]=arr[j++];
-	}
-	for(i=l; i<=h; i++){
-		arr[i]=temp[j];
-	}
+    int temp[50];
+    int i = k = l;
+    int j = m + 1;
+    
+
+    while ((i <= m) && (j <= h)) {
+        if (arr[i] < arr[j]) {
+            temp[k++] = arr[i++];
+        } else {
+            temp[k++] = arr[j++];
+        }
+    }
+
+    while (i <= m) {
+        temp[k++] = arr[i++];
+    }
+
+    while (j <= h) {
+        temp[k++] = arr[j++];
+    }
+
+    for (i = l; i <= h; i++) {
+        arr[i] = temp[i];
+    }
 }
+
 
 void MergeSort::mergeSort(int arr[], int l, int h) {
 	if (l < h) {
