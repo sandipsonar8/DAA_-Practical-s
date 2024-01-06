@@ -41,11 +41,9 @@ int main() {
         int key = n / 2; // Element to search for
 
         clock_t start = clock();
-
-        // Binary search
         int result = binarySearch.binarySearch(arr, 0, n - 1, key);
-
         clock_t stop = clock();
+        
         double duration = (double)(stop - start) / CLOCKS_PER_SEC;
 
         if (result != -1)
