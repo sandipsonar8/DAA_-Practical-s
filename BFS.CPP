@@ -4,9 +4,6 @@ class BFSTree {
  private:
 	int visited[20], a[20][20], q[20], n, i, j, f, r;
  public:
-	BFSTree() {
-		f=r=0;
-	}
 	void get();
 	void bfs(int);
 };
